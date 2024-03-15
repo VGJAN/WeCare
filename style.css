@@ -5,7 +5,7 @@
 }
 
 .background {
-    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(img/bg.jpg) no-repeat center center;
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(img/bg.jpg) no-repeat center center; /*image with dark shade*/
     background-size: cover;
     height: 100vh;
     min-height: 100px;
