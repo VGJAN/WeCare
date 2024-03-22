@@ -62,18 +62,41 @@ ul li.active a {
     color: #ffffff;
 }
 
-.title {
+.call2action {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.title h1 {
+.call2action h1 {
     color: #f8f7f7;
-    font-size: 45px;
+    font-size: 50px;
     text-align: center;
     font-style: italic;
+}
+.call2action button {
+    background-color: #ea4f4b;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 16px;
+    transition: 0.5s ease;
+}
+
+.call2action button:hover {
+    background-color: #8e0000;
+    color: white;
 }
 
 .intro {
@@ -81,7 +104,7 @@ ul li.active a {
     font-size: 20px; /* Set the font size to 45 pixels */
     text-align: center; /* Align the text to the center */
     background-color: rgba(255, 255, 255, 0.765);
-    padding: 4em; /* Add padding of 10 pixels */
+    padding: 60px; /* Add padding of 10 pixels */
     margin: 0 auto; 
 }
 
@@ -93,13 +116,39 @@ ul li.active a {
 }
 
 .image {
-    padding-top: 30px;
-    padding-bottom: 30px;
+    margin: 30px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .image img {
     display: inline-block;
     margin: 0 auto;
+    margin: 0px 20px;
 }
 
+.donations {
+    padding: 60px;
+    display: flex;
+    justify-content: space-evenly;
+}
 
+.card {
+    padding: 50px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 20vw;
+    max-width: 300px;
+    margin: 30px;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 100%;
+    padding-bottom: 20px;
+}
+
+.card b {
+    color: #0ea800;
+}
