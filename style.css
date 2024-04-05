@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: 'Open Sans', 'Nunito Sans', 'Roboto', sans-serif;
 }
 
@@ -33,18 +34,18 @@ nav {
     margin-left: 60px;
 }
 
-ul {
+nav ul {
     float: right;
     list-style-type: none;
     margin-right: 60px;
 }
 
-ul li {
+nav ul li {
     display: inline-block;
     position: relative; /* Added position relative for proper positioning of sub-menu */
 }
 
-ul li a {
+nav ul li a {
     text-decoration: none;
     color: #ffffff;
     padding: 10px 20px;
@@ -52,12 +53,12 @@ ul li a {
     transition: 0.5s ease;
 }
 
-ul li a:hover {
+nav ul li a:hover {
     background-color: #ffffff;
     color: #000000;
 }
 
-ul li.active a {
+nav ul li.active a {
     background-color: #ea4f4b;
     color: #ffffff;
 }
@@ -79,6 +80,7 @@ ul li.active a {
     text-align: center;
     font-style: italic;
 }
+
 .call2action button {
     background-color: #ea4f4b;
     color: #ffffff;
@@ -124,7 +126,6 @@ ul li.active a {
 
 .image img {
     display: inline-block;
-    margin: 0 auto;
     margin: 0px 20px;
 }
 
@@ -151,4 +152,81 @@ ul li.active a {
 
 .card b {
     color: #0ea800;
+}
+
+footer {
+    width: 100%;
+    padding: 30px 50px;
+    color: #ffffff;
+    background-color: #eeeeee;
+}
+
+.footer-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 0 auto;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.logo img {
+    float: left;
+    width: 120px;
+    height: auto;
+    padding: 10px;
+}
+
+.learn-more ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.learn-more ul li {
+    margin-right: 25px;
+}
+
+.learn-more ul li a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.contact-us .fa-brands {
+    padding: 10px;
+    font-size: 20px;
+    width: 2em;
+    text-decoration: none;
+    text-align: center;
+    margin: 2px;
+    border-radius: 50%;
+}
+
+.contact-us .fa:hover {
+      opacity: 0.7;
+}
+
+.contact-us .fa-facebook-f {
+    background: #3B5998;
+    color: #ffffff;
+}
+
+.contact-us .fa-x-twitter {
+    background: #000000;
+    color: #ffffff;
+}
+
+.contact-us .fa-instagram {
+    background: #dd2a7b;
+    color: #ffffff;
 }
