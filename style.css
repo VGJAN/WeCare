@@ -117,40 +117,43 @@ nav ul li.active a {
     font-size: 16px;
 }
 
-.image {
+.image-container .image {
     margin: 30px 0px;
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 
-.image img {
+.image-container .image img {
     display: inline-block;
     margin: 0px 20px;
 }
 
 .donations {
-    padding: 60px;
-    display: flex;
-    justify-content: space-evenly;
+    padding: 60px 30px;
+    width: 100%;display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.card {
+.donations .card {
     padding: 50px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    width: 20vw;
+    width: 15vw;
+    min-width: 220px;
     max-width: 300px;
     margin: 30px;
     text-align: center;
 }
 
-.card img {
+.donations .card img {
     width: 100%;
-    border-radius: 100%;
-    padding-bottom: 20px;
+    border-radius: 50%;
+    margin-bottom: 20px;
 }
 
-.card b {
+.donations .card b {
     color: #0ea800;
 }
 
@@ -194,7 +197,7 @@ footer {
 }
 
 .learn-more ul li {
-    margin-right: 25px;
+    margin: 0 12px;
 }
 
 .learn-more ul li a {
