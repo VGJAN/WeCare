@@ -12,40 +12,35 @@
     min-height: 100px;
 }
 
-nav {
+.topnav {
     width: 100%;
     margin: auto;
     overflow: hidden;
-    /* background-color: #88888815; */
+    /* box-shadow: inset 0 0 50px rgba(0, 0, 0);  */
     position: absolute;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 20px 0;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     z-index: 10;
 }
 
-#logo {
+.topnav #logo {
     float: left;
-    width: 65px;
+    width: 70px;
     height: auto;
     padding: 10px;
-    margin-left: 60px;
 }
 
-nav ul {
-    float: right;
+.topnav ul {
     list-style-type: none;
-    margin-right: 60px;
 }
 
-nav ul li {
+.topnav ul li {
     display: inline-block;
-    position: relative; /* Added position relative for proper positioning of sub-menu */
 }
 
-nav ul li a {
+.topnav ul li a {
     text-decoration: none;
     color: #ffffff;
     padding: 10px 20px;
@@ -53,14 +48,98 @@ nav ul li a {
     transition: 0.5s ease;
 }
 
-nav ul li a:hover {
+.topnav ul li a:hover {
     background-color: #ffffff;
     color: #000000;
 }
 
-nav ul li.active a {
+.topnav ul li.active a {
     background-color: #ea4f4b;
     color: #ffffff;
+}
+
+.topnav .menu-icon {
+    display: none;
+}
+
+@media all and (max-width: 1000px) {
+    .topnav {
+        flex-direction: column;
+    }
+
+    .topnav .nav-logo {
+        width: 100%;
+    }
+
+    .topnav #logo {
+        margin-left: 60px;
+    }
+
+    .topnav .menu-icon {
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 0;
+        font-size: 40px;
+        padding: 10px;
+        margin-right: 60px;
+        color: #ffffff;
+    }
+    
+    .topnav ul {
+        list-style-type: none;
+        width: 100%;
+        text-align: center;
+        padding-top: 20px;
+        display: none;
+    }
+    
+    .topnav ul li {
+        display: block;
+        border-top: 1px solid white;
+        background-color: #ea4f4b;
+        padding: 20px 0;
+        width: 100%;
+    }
+
+    .topnav ul li a {
+        text-decoration: none;
+        color: #ffffff;
+        padding: 20px 20px;
+        border: 1px solid transparent;
+        transition: 0.3s ease;
+    }
+
+    .topnav ul li.active a,
+    .topnav ul li a {
+        pointer-events: none;
+    }
+    
+    .topnav ul li.active {
+        padding: 18px 20px;
+        background-color: #8e0000;
+        pointer-events: none;
+    }
+
+    .topnav ul li.active a {
+        background-color: transparent;
+    }
+    
+    .topnav ul li.active:hover a {
+        color: #ffffff;
+    }
+
+    .topnav ul li:hover {
+        background-color: #ffffff;
+    }
+
+    .topnav ul li:hover a {
+        color: #000000;
+    }
+    
+    .topnav .nav-active {
+        display: block;
+    }
 }
 
 .call2action {
@@ -101,7 +180,7 @@ nav ul li.active a {
     color: white;
 }
 
-.intro {
+.intro-section {
     color: rgb(0, 0, 0); /* Set the text color to black */
     font-size: 20px; /* Set the font size to 45 pixels */
     text-align: center; /* Align the text to the center */
@@ -110,21 +189,41 @@ nav ul li.active a {
     margin: 0 auto; 
 }
 
-.image-container {
+.evidence-section {
     text-align: center; /* Center the image horizontally */
     background-color: #ffc4c4; /* Background color for the square box */
     padding: 60px;
     font-size: 16px;
 }
 
-.image-container .image {
+.evidence-section .image-container {
     margin: 30px 0px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+    white-space: nowrap;
+    overflow-x: auto;
 }
 
-.image-container .image img {
+.evidence-section .image-container::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+.evidence-section .image-container::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 2px grey; 
+    border-radius: 20px;
+}
+
+/* Handle */
+.evidence-section .image-container::-webkit-scrollbar-thumb {
+    background: #ea4f4b; 
+    border-radius: 20px;
+}
+
+/* Handle on hover */
+.evidence-section .image-container::-webkit-scrollbar-thumb:hover {
+    background: #8e0000;
+}
+
+.evidence-section .image-container img {
     display: inline-block;
     margin: 0px 20px;
 }
