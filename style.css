@@ -131,10 +131,18 @@ nav ul li.active a {
 
 .donations {
     padding: 60px 30px;
-    width: 100%;display: flex;
+    width: 100%;
+}
+
+.donations .cards {
+    display: flex;
+    justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
+}
+
+.donations h2 {
+    text-align: center;
 }
 
 .donations .card {
@@ -145,6 +153,7 @@ nav ul li.active a {
     max-width: 300px;
     margin: 30px;
     text-align: center;
+    background-color: #ffe6e6;
 }
 
 .donations .card img {
