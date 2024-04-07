@@ -93,7 +93,7 @@
     margin: 4px 2px;
     cursor: pointer;
     border-radius: 16px;
-    transition: 0.5s ease;
+    transition: 0.3s ease;
 }
 
 .call2action button:hover {
@@ -158,6 +158,7 @@
     justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
+    margin-top: 10px;
 }
 
 .donations h2 {
@@ -173,6 +174,7 @@
     margin: 30px;
     text-align: center;
     background-color: #ffe6e6;
+    transition: 0.5s ease;
 }
 
 .donations .card img {
@@ -297,7 +299,7 @@ footer {
     .topnav ul li {
         display: block;
         border-top: 1px solid white;
-        background-color: #ea4f4b;
+        background-color: #ec7975;
         padding: 20px 0;
         width: 100%;
     }
@@ -316,7 +318,7 @@ footer {
     }
     
     .topnav ul li.active {
-        background-color: #8e0000;
+        background-color: #ea4f4b;
         pointer-events: none;
     }
 
@@ -359,6 +361,35 @@ footer {
         margin-top: 10px;
     }
 
+    .learn-more ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .learn-more ul li{
+        margin: 5px 0;
+    }
+}
+
+@media all and (max-width: 1200px) {
+    .donations .cards {
+        padding: 0 150px;
+    }
+}
+
+@media all and (max-width: 1000px) {
+    .donations .cards {
+        padding: 0 100px;
+    }
+}
+
+@media all and (max-width: 860px) {
+    .donations .cards {
+        padding: 0 0;
+    }
+}
+
+@media all and (max-width: 650px) {
     .donations .card {
         padding: 20px;
         box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
@@ -369,14 +400,5 @@ footer {
     .donations .card img {
         width: 80%;
         margin-bottom: 15px;
-    }
-
-    .learn-more ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .learn-more ul li{
-        margin: 5px 0;
     }
 }
