@@ -5,11 +5,49 @@
     font-family: 'Open Sans', 'Nunito Sans', 'Roboto', sans-serif;
 }
 
-.home-background {
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(img/bg.jpg) no-repeat center center; /*image with dark shade*/
-    background-size: cover;
+.home-background,
+.donate-background,
+.programs-background,
+.gallery-background,
+.story-background,
+.contact-background,
+.about-background,
+.account-background {
     height: 100vh;
     min-height: 100px;
+    
+}
+
+.home-background {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(img/bg-home.jpg) no-repeat center center/cover; /*image with dark shade*/
+}
+
+.donate-background {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(img/bg-donate.jpg) no-repeat center center/cover; /*image with dark shade*/
+}
+
+.programs-background {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(img/bg-programs.jpg) no-repeat center center/cover; /*image with dark shade*/
+}
+
+.gallery-background {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(img/bg-gallery.jpg) no-repeat center center/cover; /*image with dark shade*/
+}
+
+.story-background {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(img/bg-story.jpg) no-repeat center center/cover; /*image with dark shade*/
+}
+
+.contact-background {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(img/bg-contact.jpg) no-repeat center center/cover; /*image with dark shade*/
+}
+
+.about-background {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(img/bg-about.jpg) no-repeat center center/cover; /*image with dark shade*/
+}
+
+.account-background {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(img/bg-account.jpg) no-repeat center center/cover; /*image with dark shade*/
 }
 
 .topnav {
@@ -401,4 +439,21 @@ footer {
         width: 80%;
         margin-bottom: 15px;
     }
+}
+.program {
+    display: flex;
+}
+
+.program .img,
+.program .text {
+    width: 50%;
+    padding: 40px;
+}
+
+.program img {
+    width: 100%;
+}
+
+.program-mid {
+    background-color: #ffc4c4;
 }
