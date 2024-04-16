@@ -47,6 +47,7 @@
 }
 
 .account-background {
+    height: 50vh;
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(img/bg-account.jpg) no-repeat center center/cover; /*image with dark shade*/
 }
 
@@ -548,6 +549,58 @@ footer {
     margin: 10px 10px;
 }
 
+/* CONTACT */
+
+/* Add a background color and some padding around the form */
+.contact-form-container {
+    width: 100%;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 0.5s ease;
+}
+
+.contact-form-container h2{
+    text-align: center;
+}
+
+.contact-form {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin-top: 10px;
+    max-width: 700px;
+}
+
+/* Style inputs with type="text", select elements and text areas */
+.contact-form-container input[type=text], select, textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */ 
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+.contact-form-container input[type=submit] {
+    background-color: #ea4f4b;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+.contact-form-container input[type=submit]:hover {
+    color: #ffffff;
+    background-color: #8e0000;
+}
+
 /* Dropdown */
 .dropbtn {
     color: #ffffff;
@@ -597,6 +650,182 @@ footer {
     background-color: #ffffff;
     color: #000000;
 }
+
+/* ACCOUNT */
+.account-action {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.account-action h1 {
+    color: #f8f7f7;
+    font-size: 50px;
+    text-align: center;
+    font-style: italic;
+    transition: 0.5s ease;
+}
+
+.login-form-section {
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Bordered form */
+.login-form-section form {
+    border: 3px solid #f1f1f1;
+    max-width: 700px;
+}
+
+/* Full-width inputs */
+.login-form-section input[type=text], .login-form-section input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    background: #f1f1f1;
+}
+
+/* Set a style for all buttons */
+.login-form-section button {
+    background-color: #ea4f4b;
+    color: #ffffff;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* Add a hover effect for buttons */
+.login-form-section button:hover {
+    color: #ffffff;
+    background-color: #8e0000;
+}
+
+/* Extra style for the cancel button (red) */
+.login-form-section .cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    margin-left: 20px;
+    background-color: #444444;
+}
+
+.login-form-section .cancelbtn:hover {
+    background-color: #111111;
+}
+
+/* Add padding to containers */
+.login-form-section .container {
+    padding: 16px;
+}
+  
+/* The "Forgot password" text */
+.login-form-section span .psw {
+    float: right;
+    padding-top: 16px;
+}
+
+.signup-form-section {
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.signup-form-section form {
+    max-width: 700px;   
+}
+
+/* Full-width input fields */
+.signup-form-section input[type=text], .signup-form-section input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+.signup-form-section input[type=text]:focus, .signup-form-section input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+.signup-form-section hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
+
+/* Set a style for all buttons */
+.signup-form-section button {
+    background-color: #ea4f4b;
+    color: #ffffff;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+.signup-form-section button:hover {
+    background-color: #8e0000;
+}
+
+/* Extra styles for the cancel button */
+.signup-form-section .cancelbtn {
+    padding: 14px 20px;
+    background-color: #444444;
+}
+
+.signup-form-section .cancelbtn:hover {
+    background-color: #111111;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.signup-form-section .cancelbtn, .signup-form-section .signupbtn {
+    float: left;
+    width: 50%;
+}
+
+/* Add padding to container elements */
+.signup-form-section .container {
+    padding: 16px;
+}
+
+/* Clear floats */
+.signup-form-section .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+    .signup-form-section .cancelbtn, .signup-form-section .signupbtn {
+        width: 100%;
+    }
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    .login-form-section span .psw {
+        display: block;
+        float: none;
+    }
+    .login-form-section .cancelbtn {
+        width: 100%;
+    }
+}
+
 
 /* RESPONSIVE */
 @media all and (max-width: 1000px) {
