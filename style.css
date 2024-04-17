@@ -152,7 +152,7 @@
 }
 
 .intro-section {
-    color: rgb(0, 0, 0); /* Set the text color to black */
+    color: #000000; /* Set the text color to black */
     /* font-size: 16px; */
     text-align: center; /* Align the text to the center */
     background-color: rgba(255, 255, 255, 0.765);
@@ -198,12 +198,14 @@
     margin: 0px 20px;
 }
 
-.donations {
+.donations,
+.team {
     padding: 60px 30px;
     width: 100%;
 }
 
-.donations .cards {
+.donations .cards,
+.team .cards {
     display: flex;
     justify-content: center;
     flex-direction: row;
@@ -211,11 +213,13 @@
     margin-top: 10px;
 }
 
-.donations h2 {
+.donations h2,
+.team h2 {
     text-align: center;
 }
 
-.donations .card {
+.donations .card,
+.team .card {
     padding: 50px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     width: 15vw;
@@ -227,7 +231,8 @@
     transition: 0.5s ease;
 }
 
-.donations .card img {
+.donations .card img,
+.team .card img {
     width: 100%;
     border-radius: 50%;
     margin-bottom: 20px;
@@ -241,8 +246,16 @@
 footer {
     width: 100%;
     padding: 30px 50px;
-    color: #ffffff;
+    color: #000000;
     background-color: #eeeeee;
+}
+
+footer hr {
+    margin: 25px 0;
+}
+
+footer p {
+    text-align: center;
 }
 
 .footer-container {
@@ -326,6 +339,12 @@ footer {
 .program .text {
     width: 50%;
     padding: 40px;
+}
+
+.program .img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .program img {
@@ -463,6 +482,7 @@ footer {
 }
 
 .donor input[type="text"],
+.donor input[type="email"],
 .amount-field input[type="number"] {
     width: 100%;
     height: 30px;
@@ -547,6 +567,7 @@ footer {
 .gallery-section .image-container img {
     display: inline-block;
     margin: 10px 10px;
+    width: 300px;
 }
 
 /* CONTACT */
@@ -680,11 +701,14 @@ footer {
 /* Bordered form */
 .login-form-section form {
     border: 3px solid #f1f1f1;
+    border-radius: 5px;
     max-width: 700px;
 }
 
 /* Full-width inputs */
-.login-form-section input[type=text], .login-form-section input[type=password] {
+.login-form-section input[type=text], 
+.login-form-section input[type=email], 
+.login-form-section input[type=password] {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -741,11 +765,13 @@ footer {
 }
 
 .signup-form-section form {
-    max-width: 700px;   
+    max-width: 700px;
+    border-radius: 5px;
 }
 
 /* Full-width input fields */
-.signup-form-section input[type=text], .signup-form-section input[type=password] {
+.signup-form-section input[type=email], 
+.signup-form-section input[type=password] {
     width: 100%;
     padding: 15px;
     margin: 5px 0 22px 0;
@@ -754,7 +780,8 @@ footer {
     background: #f1f1f1;
 }
 
-.signup-form-section input[type=text]:focus, .signup-form-section input[type=password]:focus {
+.signup-form-section input[type=email]:focus, 
+.signup-form-section input[type=password]:focus {
     background-color: #ddd;
     outline: none;
 }
@@ -808,6 +835,58 @@ footer {
     display: table;
 }
 
+.about-us {
+    color: #000000;
+    text-align: center;
+    padding: 60px;
+    margin: 0 auto; 
+}
+
+.about-us h2,
+.history h2 {
+    margin-bottom: 30px;
+}
+
+.history {
+    color: #000000;
+    text-align: center;
+    background-color: #ffc4c4;
+    padding: 60px;
+    margin: 0 auto; 
+}
+.team .card {
+    padding: unset;
+}
+
+.team .card img {
+    padding: 50px;
+}
+
+.team .cards h2 {
+    margin-top: -50px;
+}
+
+.team p {
+    font-size: 15px;
+    margin-bottom: 50px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 0.5px solid #8e0000;
+}
+
+th {
+    background-color: #ea504b50;
+    border-top-right-radius: 100px;
+}
+
 /* Change styles for cancel button and signup button on extra small screens */
 @media screen and (max-width: 300px) {
     .signup-form-section .cancelbtn, .signup-form-section .signupbtn {
@@ -825,7 +904,6 @@ footer {
         width: 100%;
     }
 }
-
 
 /* RESPONSIVE */
 @media all and (max-width: 1000px) {
@@ -906,9 +984,22 @@ footer {
         display: block;
     }
 
-    /* .program {
+    .program {
         flex-direction: column;
-    } */
+    }
+
+    .program .img {
+        width: 100%;
+        padding-bottom: 0;
+    }
+
+    .program img {
+        max-width: 500px;
+    }
+
+    .program .text {
+        width: 100%;
+    }
 
     .footer-container {
         flex-direction: column;
@@ -940,19 +1031,22 @@ footer {
 }
 
 @media all and (max-width: 1200px) {
-    .donations .cards {
+    .donations .cards,
+    .team .cards {
         padding: 0 150px;
     }
 }
 
 @media all and (max-width: 1000px) {
-    .donations .cards {
+    .donations .cards,
+    .team .cards {
         padding: 0 100px;
     }
 }
 
 @media all and (max-width: 860px) {
-    .donations .cards {
+    .donations .cards,
+    .team .cards {
         padding: 0 0;
     }
 
@@ -961,6 +1055,7 @@ footer {
     }
     
     .donor input[type="text"],
+    .donor input[type="email"],
     .amount-field input[type="number"] {
         background-color: #ffffff80;
     }
@@ -981,16 +1076,31 @@ footer {
 }
 
 @media all and (max-width: 650px) {
-    .donations .card {
+    .donations .card,
+    .team .card {
         padding: 20px;
         box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
         min-width: 160px;
         margin: 20px;
     }
     
-    .donations .card img {
+    .donations .card img,
+    .team .card img {
         width: 80%;
         margin-bottom: 15px;
+    }
+
+    .team .card img {
+        padding: unset;
+    }
+
+    .team .cards h2 {
+        margin-top: unset;
+    }
+    
+    .team p {
+        font-size: 11px;
+        margin-bottom: unset;
     }
 }
 
