@@ -548,6 +548,16 @@ footer p {
     margin-bottom: 10px;
 }
 
+.story-ceo .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.story-ceo img {
+    width: 80%;
+}
+
 /* GALLERY */
 .gallery-section {
     text-align: center; /* Center the image horizontally */
